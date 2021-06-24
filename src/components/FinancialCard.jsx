@@ -45,7 +45,9 @@ const PlayerCard = (props) => {
           >
             <div className="card-head__change-price--value">
               {data.ChangeValue &&
-                `-${Math.round(data.ChangeValue * 100) / 100}`}
+                `${ValueStatus ? "" : "-"}${Math.abs(
+                  Math.round(data.ChangeValue * 100) / 100
+                )}`}
             </div>
             <div className="card-head__change-price--pers">
               {data.ChangePercentage &&
