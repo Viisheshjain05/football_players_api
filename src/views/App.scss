@@ -1,0 +1,15 @@
+/* *****************************
+ ?   Search Bar HEAD START     
+ * ****************************** */
+.player__search-bar--head {
+}
+
+/* *****************************
+ ?   Player List HEAD START     
+ * ****************************** */
+
+.player__list--head {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  padding: 1em;
+}
