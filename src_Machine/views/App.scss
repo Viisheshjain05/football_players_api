@@ -1,19 +1,8 @@
 /* *****************************
  ?   Search Bar HEAD START     
  * ****************************** */
-.search-bar--head {
-  /* Auto Layout */
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-
-  position: absolute;
-  width: 329px;
-  height: 48px;
-  left: 347px;
-  top: 64px;
+.player__search-bar--head {
+  margin: 3em 0 0;
 }
 
 .player__search-bar--head > input {

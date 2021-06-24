@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: "https://sandbox.iexapis.com/stable/stock/aapl/quote?token=Tsk_678b4f8a0c3b4032b11c7568fb24dc17",
+      url: "https://api.npoint.io/20c1afef1661881ddc9c",
     })
       .then((res) => {
         const List = res.data.playerList;
