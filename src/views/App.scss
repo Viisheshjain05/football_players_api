@@ -1,91 +1,23 @@
 /* *****************************
  ?   Search Bar HEAD START     
  * ****************************** */
+.player__search-bar--head {
+  margin: 3em 0 0;
+}
 
-.search-bar {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin: 4em auto;
-  justify-content: center;
-  height: 100%;
-  min-height: 48px;
-  font-size: 18px;
-
-  &__button {
-    background: #000000;
-    border-radius: 90px;
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: 600;
-    color: #ffffff;
-    margin: 0px 10px;
-    padding: 1.1em;
-    width: 100px;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-
-  &__input {
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: normal;
-    width: 25%;
-
-    color: #000000;
-    padding: 1.2em;
-    background: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 40px;
-
-    &::placeholder {
-      color: #aaaaaa;
-      font-weight: 500;
-    }
-  }
+.player__search-bar--head > input {
+  width: 50%;
+  padding: 1em;
+  margin: auto;
+  // color: black;
 }
 
 /* *****************************
-?   Financial Card HEAD START     
-* ****************************** */
+ ?   Player List HEAD START     
+ * ****************************** */
 
-.card__section--head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card {
-  padding: 24px;
-  width: 50%;
-  min-height: 238px;
-  background: #ffffff;
-  box-shadow: 0px 2px 12px #00000029;
-  border-radius: 24px;
-}
-
-// css
-
-.error {
-  &__wrong {
-    display: flex;
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-
-    color: #888888;
-  }
-  &__start {
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-
-    color: #888888;
-  }
+.player__list--head {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  padding: 1em;
 }
