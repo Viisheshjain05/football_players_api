@@ -1,34 +1,63 @@
 /* *****************************
  ?   Search Bar HEAD START     
  * ****************************** */
-.search-bar--head {
-  /* Auto Layout */
 
+.search-bar {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0px;
+  margin: 4em auto;
+  justify-content: center;
+  height: 100%;
+  min-height: 48px;
+  font-size: 18px;
 
-  position: absolute;
-  width: 329px;
-  height: 48px;
-  left: 347px;
-  top: 64px;
-}
+  &__button {
+    background: #000000;
+    border-radius: 90px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0px 10px;
+    padding: 1.1em;
+    width: 100px;
+    text-transform: uppercase;
+  }
 
-.player__search-bar--head > input {
-  width: 50%;
-  padding: 1em;
-  margin: auto;
-  // color: black;
+  &__input {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+
+    color: #000000;
+    padding: 1.2em;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 40px;
+    
+    &::placeholder {
+      color: #000000;
+      font-weight: 500;
+    }
+  }
 }
 
 /* *****************************
- ?   Player List HEAD START     
- * ****************************** */
+?   Financial Card HEAD START     
+* ****************************** */
 
-.player__list--head {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  padding: 1em;
+.card__section--head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  padding: 24px;
+  width: 50%;
+  min-height: 238px;
+  background: #ffffff;
+  box-shadow: 0px 2px 12px #00000029;
+  border-radius: 24px;
 }
