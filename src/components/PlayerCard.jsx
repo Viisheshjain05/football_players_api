@@ -40,7 +40,7 @@ const PlayerCard = (props) => {
 
         <div className="player__stats">
           <div className="player__stats--name">price</div>
-          <div className="player__stats--value">{price}</div>
+          <div className="player__stats--value">${price}</div>
         </div>
 
         <div className="player__stats">
