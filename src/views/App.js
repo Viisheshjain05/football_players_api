@@ -5,6 +5,9 @@ import "./App.scss";
 
 const App = () => {
   const [PlayerData, setPlayerData] = useState([]);
+  const [SearchPlayer, setSearchPlayer] = useState("");
+
+  // const searchPlayer = useRef();
 
   useEffect(() => {
     axios({
@@ -35,30 +38,63 @@ const App = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  // console.log(PlayerData);
+  // useEffect(() => {
+  // const alfa = searchPlayer.current.value;
+  // }, [searchPlayer]);
+
+  // console.log(SearchPlayer);
 
   return (
     <>
       <div className="player__search-bar--head">
-        <input type="text" name="" id="" placeholder="Search Players" />
+        <input
+          type="text"
+          // ref={searchPlayer}
+          name=""
+          id=""
+          onChange={(e) => setSearchPlayer(e.target.value)}
+          placeholder="Search Players"
+        />
       </div>
 
       <div className="player__list--head">
         {PlayerData.map((el, ind) => {
-          return (
-            <React.Fragment key={el.id}>
-              <PlayerCard
-                player_img={el.id}
-                name={el.PFName}
-                skills={el.SkillDesc}
-                price={el.Value}
-                matches={el.UpComingMatches}
-              />
-            </React.Fragment>
-          );
+          if (SearchPlayer === "") {
+            return (
+              <React.Fragment key={el.id}>
+                <PlayerCard
+                  player_img={el.id}
+                  name={el.PFName}
+                  skills={el.SkillDesc}
+                  price={el.Value}
+                  matches={el.UpComingMatches}
+                />
+              </React.Fragment>
+            );
+          }
+          if (SearchPlayer !== "") {
+            if (
+              el.PFName.toLowerCase().indexOf(SearchPlayer.toLowerCase()) !== -1
+            ) {
+              return (
+                <React.Fragment key={el.id}>
+                  <PlayerCard
+                    player_img={el.id}
+                    name={el.PFName}
+                    skills={el.SkillDesc}
+                    price={el.Value}
+                    matches={el.UpComingMatches}
+                    // highlight={el.PFName.toLowerCase().indexOf(
+                    // SearchPlayer.toLowerCase()
+                    // )}
+                  />
+                </React.Fragment>
+              );
+            }
+          }
+          return "";
         })}
       </div>
-      <div className="">hii</div>
     </>
   );
 };
